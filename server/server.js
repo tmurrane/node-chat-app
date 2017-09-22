@@ -18,6 +18,17 @@ io.on('connection', (socket) => {
     console.log('createEmail: ', newEmail);
   });
 
+  socket.broadcast.emit('joinedMessage', {
+    from: 'Admin',
+    text: 'New user has joined',
+    createdAt: new Date().getTime()
+  });
+
+  socket.emit('welcomeMessage', {
+    from: 'Admin',
+    text: 'Welcome to the chat!'
+  });
+
   socket.on('createMessage', (newMessage) => {
     console.log('createMessage: ', newMessage);
     io.emit('newMessage', {
