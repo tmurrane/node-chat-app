@@ -16,11 +16,3 @@ socket.on('newEmail', function (email) {
 socket.on('newMessage', function (message) {
   console.log('New message: ', message);
 });
-
-socket.on('joinedMessage', function (message) {
-  console.log('Joined message: ', message);
-});
-
-socket.on('welcomeMessage', function (message) {
-  console.log('Welcome message: ', message);
-});
