@@ -5,10 +5,6 @@ var {generateLocationMessage} = require('./message');
 
 describe('generate message', () => {
   it('should generate correct message object', () => {
-    //store resp in var
-    //asset from matches value
-    //asset text matches
-    //assert createdAt is toBeA('number')
     var from = 'Tom';
     var text = 'Some message';
     var message = generateMessage(from, text);
